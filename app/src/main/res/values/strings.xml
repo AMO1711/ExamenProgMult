@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">ExamenProgMult</string>
+    <string name="Titulo">Entrenamientos</string>
+    <string name="anadir_entreno">Añadir entreno</string>
+
+    <string-array name="nombre_entrenamientos_iniciales">
+        <item>Correr</item>
+        <item>Bicicleta</item>
+        <item>Levantamiento de pesas</item>
+        <item>Levantamiento de barra</item>
+    </string-array>
+
+    <string-array name="descripcion_entrenamienos_iniciales">
+        <item>1. Trotar a paso ligero 10 min</item>
+        <item>1. Pedalear ligero sin pendiente 10 min</item>
+        <item>1. Levantar las pesas hacia los lados con los brazos estirados 1 min</item>
+        <item>1. Levantar la barra 10 veces</item>
+    </string-array>
+
+    <string-array name="imagenes">
+        <item>correr</item>
+        <item>bicicleta</item>
+        <item>levantar_pesas</item>
+        <item>levantar_barra</item>
+    </string-array>
 </resources>

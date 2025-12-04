@@ -32,9 +32,20 @@
             android:textColor="@color/white"/>
     </ActionMenuView>
 
-    <FrameLayout
-        android:id="@+id/pantallaFragment1"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent">
 
+        <FrameLayout
+            android:id="@+id/pantallaFragment1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <FrameLayout
+            android:id="@+id/pantallaFragment2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+    </LinearLayout>
 </LinearLayout>
