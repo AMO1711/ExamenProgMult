@@ -2,6 +2,8 @@
     <string name="app_name">ExamenProgMult</string>
     <string name="Titulo">Entrenamientos</string>
     <string name="anadir_entreno">Añadir entreno</string>
+    <string name="hint_nombre">Ingrese nombre del entrenamiento</string>
+    <string name="hint_descripcion">Ingrese descripcion del entrenamiento</string>
 
     <string-array name="nombre_entrenamientos_iniciales">
         <item>Correr</item>

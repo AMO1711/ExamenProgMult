@@ -27,18 +27,15 @@ public class ListaEjercicios extends Fragment {
                              @Nullable Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.lista_ejercicios, container, false);
-
-        // Obtener la lista de entrenos de MainActivity
         MainActivity activity = (MainActivity) getActivity();
+
         if (activity != null) {
             entrenos = activity.getEntrenos();
-
+            adapter = new EntrenoAdapter(entrenos);
             ListView lista_ejercicios = view.findViewById(R.id.lista_ejercicios);
 
-            adapter = new EntrenoAdapter(entrenos);
             lista_ejercicios.setAdapter(adapter);
 
-            // Listener para clicks en items
             lista_ejercicios.setOnItemClickListener((parent, v, position, id) -> {
                 activity.colocarDetallesEntreno(entrenos.get(position));
             });
@@ -47,7 +44,6 @@ public class ListaEjercicios extends Fragment {
         return view;
     }
 
-    // Adapter interno para el ListView
     private class EntrenoAdapter extends BaseAdapter {
 
         private final ArrayList<MainActivity.Entreno> entrenos;
@@ -74,8 +70,7 @@ public class ListaEjercicios extends Fragment {
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             if (convertView == null) {
-                convertView = LayoutInflater.from(getContext())
-                        .inflate(R.layout.list_item, parent, false);
+                convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
             }
 
             ImageView imagen = convertView.findViewById(R.id.imagen_item_lista);
@@ -88,13 +83,11 @@ public class ListaEjercicios extends Fragment {
             return convertView;
         }
 
-        // Método para actualizar la lista si se añade un nuevo entreno
         public void actualizarLista() {
             notifyDataSetChanged();
         }
     }
 
-    // Método público que MainActivity puede llamar al añadir un entreno
     public void refrescarLista() {
         if (adapter != null) {
             adapter.actualizarLista();

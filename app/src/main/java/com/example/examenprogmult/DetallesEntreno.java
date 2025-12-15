@@ -25,19 +25,16 @@ public class DetallesEntreno extends Fragment {
 
         View view = inflater.inflate(R.layout.detalles_entreno, container, false);
 
-        // Recuperar argumentos
         if (getArguments() != null) {
             nombre = getArguments().getString("nombre");
             descripcion = getArguments().getString("descripcion");
             imagenResId = getArguments().getInt("imagen");
         }
 
-        // Buscar views dentro del fragmento
         TextView nombreText = view.findViewById(R.id.nombre_entreno);
         TextView descripcionText = view.findViewById(R.id.descripcion_entreno);
         ImageView imagenView = view.findViewById(R.id.imagen_entreno);
 
-        // Asignar datos
         nombreText.setText(nombre);
         descripcionText.setText(descripcion);
         imagenView.setImageResource(imagenResId);
